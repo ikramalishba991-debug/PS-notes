@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pakistan Studies - 6-Day Learning Module</title>
-    <!-- Importing Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Importing Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -40,11 +38,11 @@
         }
 
         /* Tab button styling */
-        .tab-button {
+        .tab-button, .or-tab-button {
             transition: all 0.3s ease;
         }
 
-        .tab-button.active {
+        .tab-button.active, .or-tab-button.active {
             background-color: var(--pak-green);
             color: var(--pak-white);
             box-shadow: 0 4px 14px rgba(0, 106, 78, 0.3);
@@ -116,7 +114,6 @@
 </head>
 <body class="text-pak-dark-text">
 
-    <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold" style="color: var(--pak-green);">
@@ -129,9 +126,7 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
         <section id="hero" class="bg-gradient-to-r from-green-50 to-emerald-50 py-20 px-6">
             <div class="container mx-auto flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
@@ -142,23 +137,20 @@
                     </a>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <!-- Animated Graphic: Crescent and Mountain -->
                     <svg class="w-64 h-64 md:w-80 md:h-80 hero-graphic" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <path fill="#C6F6D5" d="M 20,180 Q 100,60 180,180 Z" />
                         <path fill="#68D391" d="M 50,180 Q 100,100 150,180 Z" />
-                        <path fill="white" d="M124.6,34.2c-1.3-0.3-2.6-0.4-3.9-0.4c-21.7,0-39.3,17.6-39.3,39.3c0,0.9,0,1.8,0.1,2.7 c-1.8-0.7-3.7-1.1-5.6-1.1c-15.6,0-28.2,12.7-28.2,28.2c0,15.6,12.7,28.2,28.2,28.2c1.9,0,3.8-0.2,5.6-0.6 c-0.1,0.9-0.2,1.8-0.2,2.8c0,21.7,17.6,39.3,39.3,39.3c1.3,0,2.6-0.1,3.9-0.2c-0.3,1.3-0.4,2.6-0.4,3.9 c0,22.6,18.3,40.9,40.9,40.9c1.9,0,3.7-0.1,5.5-0.4c-3.1,12-14.8,20.6-28.2,20.6c-16.2,0-29.3-13.1-29.3-29.3 c0-1.9,0.2-3.8,0.6-5.6c-0.9,0.1-1.8,0.2-2.8,0.2c-16.2,0-29.3-13.1-29.3-29.3c0-1.9,0.2-3.8,0.6-5.6 c-0.9,0.1-1.8,0.2-2.8,0.2c-16.2,0-29.3-13.1-29.3-29.3c0-1.9,0.2-3.8,0.6-5.6c-0.9,0.1-1.8,0.2-2.8,0.2 c-16.2,0-29.3-13.1-29.3-29.3c0-13.5,9.1-24.9,21.5-28.2c-0.3-1.8-0.4-3.7-0.4-5.5c0-22.6,18.3-40.9,40.9-40.9 c1.3,0,2.6,0.1,3.9,0.2c-0.3-1.3-0.4-2.6-0.4-3.9c0-16.2,13.1-29.3,29.3-29.3c13.5,0,24.9,9.1,28.2,21.5 c1.8-0.3,3.7-0.4,5.5-0.4c16.2,0,29.3,13.1,29.3,29.3c0,1.9-0.2,3.8-0.6,5.6c0.9-0.1,1.8-0.2,2.8-0.2 c16.2,0,29.3,13.1,29.3,29.3c0,1.9-0.2,3.8-0.6,5.6c0.9-0.1,1.8-0.2,2.8-0.2c16.2,0,29.3,13.1,29.3,29.3 c0,1.9-0.2,3.8-0.6,5.6c0.9-0.1,1.8-0.2,2.8-0.2c16.2,0,29.3,13.1,29.3,29.3c0,13.5-9.1,24.9-21.5,28.2 c0.3,1.8,0.4,3.7,0.4,5.5c0,22.6-18.3,40.9-40.9,40.9c-1.3,0-2.6-0.1-3.9-0.2c0.3,1.3,0.4,2.6,0.4,3.9 c0,16.2-13.1,29.3-29.3,29.3c-13.5,0-24.9-9.1-28.2-21.5c-1.8,0.3-3.7,0.4-5.5,0.4c-16.2,0-29.3-13.1-29.3-29.3 c0-1.9,0.2-3.8,0.6-5.6c-0.9,0.1-1.8,0.2-2.8,0.2c-16.2,0-29.3-13.1-29.3-29.3c0-1.9,0.2-3.8,0.6-5.6 c-0.9,0.1-1.8,0.2-2.8,0.2c-16.2,0-29.3-13.1-29.3-29.3c0-1.9,0.2-3.8,0.6-5.6c-0.9,0.1-1.8,0.2-2.8,0.2 c-16.2,0-29.3-13.1-29.3-29.3c0-13.5,9.1-24.9,21.5-28.2c-0.3-1.8-0.4-3.7-0.4-5.5C32.1,51.5,47.7,34.2,67.8,34.2 c1.3,0,2.6,0.1,3.9,0.2C71.3,21.2,81.4,12,93.8,12c14.7,0,26.7,11.3,28.1,25.8C123.2,37,124,35.6,124.6,34.2z" />
+                        <path fill="white" d="M124.6,34.2c-1.3-0.3-2.6-0.4-3.9-0.4c-21.7,0-39.3,17.6-39.3,39.3c0,0.9,0,1.8,0.1,2.7 c-1.8-0.7-3.7-1.1-5.6-1.1c-15.6,0-28.2,12.7-28.2,28.2c0,15.6,12.7,28.2,28.2,28.2c1.9,0,3.8-0.2,5.6-0.6 c-0.1,0.9-0.2,1.8-0.2,2.8c0,21.7,17.6,39.3,39.3,39.3c1.3,0,2.6-0.1,3.9-0.2c-0.3,1.3-0.4,2.6-0.4,3.9 c0,22.6,18.3,40.9,40.9,40.9c1.9,0,3.7-0.1,5.5-0.4c-3.1,12-14.8,20.6-28.2,20.6c-16.2,0-29.3-13.1-29.3-29.3 c0-1.9,0.2-3.8,0.6-5.6c-0.9,0.1-1.8,0.2-2.8,0.2c-16.2,0-29.3-13.1-29.3-29.3c0-1.9,0.2-3.8,0.6-5.6 c-0.9,0.1-1.8,0.2-2.8,0.2c-16.2,0-29.3-13.1-29.3-29.3c0-1.9,0.2-3.8,0.6-5.6 c-0.9,0.1-1.8,0.2-2.8,0.2 c-16.2,0-29.3-13.1-29.3-29.3c0-13.5,9.1-24.9,21.5-28.2c-0.3-1.8-0.4-3.7-0.4-5.5c0-22.6,18.3-40.9,40.9-40.9 c1.3,0,2.6,0.1,3.9,0.2c-0.3-1.3-0.4-2.6-0.4-3.9c0-16.2,13.1-29.3,29.3-29.3c13.5,0,24.9,9.1,28.2,21.5 c1.8-0.3,3.7-0.4,5.5-0.4c16.2,0,29.3,13.1,29.3,29.3c0,1.9-0.2,3.8-0.6,5.6c0.9-0.1,1.8-0.2,2.8-0.2 c16.2,0,29.3,13.1,29.3,29.3c0,1.9-0.2,3.8-0.6,5.6c0.9-0.1,1.8-0.2,2.8-0.2c16.2,0,29.3,13.1,29.3,29.3 c0,1.9-0.2,3.8-0.6,5.6c0.9-0.1,1.8-0.2,2.8-0.2c16.2,0,29.3,13.1,29.3,29.3c0,13.5-9.1,24.9-21.5,28.2 c0.3,1.8,0.4,3.7,0.4,5.5c0,22.6-18.3,40.9-40.9,40.9c-1.3,0-2.6-0.1-3.9-0.2c0.3,1.3,0.4,2.6,0.4,3.9 c0,16.2-13.1,29.3-29.3,29.3c-13.5,0-24.9-9.1-28.2-21.5c-1.8,0.3-3.7,0.4-5.5,0.4c-16.2,0-29.3-13.1-29.3-29.3 c0-1.9,0.2-3.8,0.6-5.6c-0.9,0.1-1.8,0.2-2.8,0.2c-16.2,0-29.3-13.1-29.3-29.3c0-1.9,0.2-3.8,0.6-5.6 c-0.9,0.1-1.8,0.2-2.8,0.2c-16.2,0-29.3-13.1-29.3-29.3c0-1.9,0.2-3.8,0.6-5.6c-0.9,0.1-1.8,0.2-2.8,0.2 c-16.2,0-29.3-13.1-29.3-29.3c0-13.5,9.1-24.9,21.5-28.2c-0.3-1.8-0.4-3.7-0.4-5.5C32.1,51.5,47.7,34.2,67.8,34.2 c1.3,0,2.6,0.1,3.9,0.2C71.3,21.2,81.4,12,93.8,12c14.7,0,26.7,11.3,28.1,25.8C123.2,37,124,35.6,124.6,34.2z" />
                     </svg>
                 </div>
             </div>
         </section>
 
-        <!-- 6-Day Schedule Section -->
         <section id="schedule" class="container mx-auto px-6 py-16">
             <h2 class="text-4xl font-extrabold text-center mb-12">
                 Your 6-Day Learning Schedule
             </h2>
 
-            <!-- Tab Buttons -->
             <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-10">
                 <button class="tab-button active font-semibold py-3 px-6 rounded-full" data-tab="day1">Day 1: Foundations</button>
                 <button class="tab-button font-semibold py-3 px-6 rounded-full" data-tab="day2">Day 2: The Pakistan Movement</button>
@@ -168,12 +160,9 @@
                 <button class="tab-button font-semibold py-3 px-6 rounded-full" data-tab="day6">Day 6: Modern Challenges</button>
             </div>
 
-            <!-- Tab Content -->
             <div classs="max-w-4xl mx-auto">
                 
-                <!-- Day 1 Content -->
                 <div id="day1" class="tab-content space-y-6">
-                    <!-- Lecture 1 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 1: Geographical Location and Significance</h3>
                         
@@ -207,7 +196,6 @@
                         </ul>
                     </div>
 
-                    <!-- Lecture 2 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 2: Historical Background: Ancient Civilizations</h3>
                         
@@ -237,7 +225,6 @@
                         </p>
                     </div>
 
-                    <!-- Exam Questions Day 1 -->
                     <div class="exam-question fade-in">
                         <h4>Practice Exam Questions for Day 1</h4>
                         <ul class="list-disc ml-6 space-y-2 text-gray-700">
@@ -248,9 +235,7 @@
                     </div>
                 </div>
 
-                <!-- Day 2 Content -->
                 <div id="day2" class="tab-content space-y-6 hidden">
-                    <!-- Lecture 3 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 3: Factors Leading to the Creation of Pakistan</h3>
                         
@@ -289,7 +274,6 @@
                         </p>
                     </div>
                     
-                    <!-- Lecture 4 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 4: Political, Educational, and Religious Services of Sir Syed Ahmad Khan</h3>
                         
@@ -322,7 +306,6 @@
                         </p>
                     </div>
 
-                    <!-- Exam Questions Day 2 -->
                     <div class="exam-question fade-in">
                         <h4>Practice Exam Questions for Day 2</h4>
                         <ul class="list-disc ml-6 space-y-2 text-gray-700">
@@ -333,9 +316,7 @@
                     </div>
                 </div>
 
-                <!-- Day 3 Content -->
                 <div id="day3" class="tab-content space-y-6 hidden">
-                    <!-- Lecture 5 & 6 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lectures 5 and 6: Formative Phase Part 1 and 2 (1947-1958)</h3>
                         
@@ -383,7 +364,6 @@
                         </p>
                     </div>
                     
-                    <!-- Lecture 7 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 7: Military Intervention and Democratic Transition</h3>
                         
@@ -412,7 +392,6 @@
                         </p>
                     </div>
 
-                    <!-- Exam Questions Day 3 -->
                     <div class="exam-question fade-in">
                         <h4>Practice Exam Questions for Day 3</h4>
                         <ul class="list-disc ml-6 space-y-2 text-gray-700">
@@ -423,9 +402,7 @@
                     </div>
                 </div>
 
-                <!-- Day 4 Content -->
                 <div id="day4" class="tab-content space-y-6 hidden">
-                    <!-- Lecture 8 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 8: River System: Indus River and its Tributaries</h3>
                         
@@ -453,7 +430,6 @@
                         </ul>
                     </div>
                     
-                    <!-- Lecture 9: Physiography -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 9: Physiography: Mountains, Plains, Plateaus, and Deserts</h3>
                         
@@ -493,7 +469,6 @@
                         </ul>
                     </div>
 
-                    <!-- Lecture 10 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 10: Climate Regions of Pakistan</h3>
                         
@@ -509,7 +484,6 @@
                         </ul>
                     </div>
                     
-                    <!-- Lecture 11 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 11: Socio-Cultural Diversity (Part 1)</h3>
                         
@@ -545,7 +519,6 @@
                         </p>
                     </div>
 
-                    <!-- Exam Questions Day 4 -->
                     <div class="exam-question fade-in">
                         <h4>Practice Exam Questions for Day 4</h4>
                         <ul class="list-disc ml-6 space-y-2 text-gray-700">
@@ -556,9 +529,7 @@
                     </div>
                 </div>
 
-                <!-- Day 5 Content -->
                 <div id="day5" class="tab-content space-y-6 hidden">
-                    <!-- Lecture 12 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 12: Languages and Literature of Pakistan (Part 2)</h3>
                         
@@ -582,7 +553,6 @@
                         </ul>
                     </div>
                     
-                    <!-- Lecture 13 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 13: Agriculture and Industrial Sectors of Pakistan</h3>
                         
@@ -609,7 +579,6 @@
                         </ul>
                     </div>
                     
-                    <!-- Lecture 14 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 14: Needs of Dams for Agriculture and Industry</h3>
                         
@@ -628,7 +597,6 @@
                         </p>
                     </div>
 
-                    <!-- Lecture 15: Economic Challenges -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 15: Major Economic Challenges of Pakistan</h3>
                         
@@ -655,7 +623,6 @@
                         </ul>
                     </div>
 
-                    <!-- Exam Questions Day 5 -->
                     <div class="exam-question fade-in">
                         <h4>Practice Exam Questions for Day 5</h4>
                         <ul class="list-disc ml-6 space-y-2 text-gray-700">
@@ -666,9 +633,7 @@
                     </div>
                 </div>
 
-                <!-- Day 6 Content -->
                 <div id="day6" class="tab-content space-y-6 hidden">
-                    <!-- Lecture 16 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 16: Foreign Policy and Foreign Relations</h3>
                         
@@ -692,7 +657,6 @@
                         </ul>
                     </div>
                     
-                    <!-- Lecture 17 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 17: Security Challenges: Terrorism, Extremism, and Regional Conflicts</h3>
                         
@@ -711,7 +675,6 @@
                         </ul>
                     </div>
                     
-                    <!-- Lecture 18 -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 18: Environmental Problems and Sustainable Development (SDGs)</h3>
                         
@@ -736,7 +699,6 @@
                         </ul>
                     </div>
 
-                    <!-- Exam Questions Day 6 -->
                     <div class="exam-question fade-in">
                         <h4>Practice Exam Questions for Day 6</h4>
                         <ul class="list-disc ml-6 space-y-2 text-gray-700">
@@ -750,9 +712,142 @@
             </div>
         </section>
 
-    </main>
+        <section id="schedule-or" class="bg-white py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-extrabold text-center mb-12">
+                    Special Module: A 6-Day Deep Dive on the Objectives Resolution
+                </h2>
 
-    <!-- Footer -->
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-10">
+                    <button class="or-tab-button active font-semibold py-3 px-6 rounded-full" data-tab="or_day1">Day 1: The Foundation</button>
+                    <button class="or-tab-button font-semibold py-3 px-6 rounded-full" data-tab="or_day2">Day 2: The Great Compromise</button>
+                    <button class="or-tab-button font-semibold py-3 px-6 rounded-full" data-tab="or_day3">Day 3: Core Clauses</button>
+                    <button class="or-tab-button font-semibold py-3 px-6 rounded-full" data-tab="or_day4">Day 4: Evolution (1956-1962)</button>
+                    <button class="or-tab-button font-semibold py-3 px-6 rounded-full" data-tab="or_day5">Day 5: The 1973 Constitution</button>
+                    <button class="or-tab-button font-semibold py-3 px-6 rounded-full" data-tab="or_day6">Day 6: Legacy and Debates</button>
+                </div>
+
+                <div classs="max-w-4xl mx-auto">
+                    
+                    <div id="or_day1" class="or-tab-content space-y-6">
+                        <div class="content-card fade-in">
+                            [cite_start]<h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 1: The 1949 Framework [cite: 3]</h3>
+                            <p class="text-pak-light-text mb-4">
+                                [cite_start]After gaining independence in August 1947, Pakistan faced immense political challenges and needed a foundational constitution[cite: 4]. [cite_start]Following the death of its founding leader, Muhammad Ali Jinnah, a clear sense of national direction was urgently needed[cite: 5]. [cite_start]To address this, Prime Minister Liaquat Ali Khan introduced the Objectives Resolution[cite: 5].
+                            </p>
+                            <h4 class="text-xl font-semibold mb-2">1. Adoption and Purpose</h4>
+                            <p class="text-pak-light-text mb-4">
+                                [cite_start]It was adopted by the first Constituent Assembly on March 12, 1949[cite: 6]. [cite_start]The Resolution was not a constitution itself, but the pivotal blueprint for all future constitutional frameworks[cite: 6].
+                            </p>
+                            <h4 class="text-xl font-semibold mb-2">2. Core Mission</h4>
+                            <p class="text-pak-light-text mb-4">
+                                [cite_start]It aimed to merge Pakistan’s core Islamic identity with the demands of modern democracy[cite: 7]. [cite_start]Critically, it guaranteed political rights for all citizens, including minorities[cite: 8]. [cite_start]In doing so, the Objectives Resolution permanently created a dualistic identity within Pakistan’s constitutional structure, a legacy that continues to define its political and legal path[cite: 8].
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="or_day2" class="or-tab-content space-y-6 hidden">
+                         <div class="content-card fade-in">
+                            [cite_start]<h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 2: The Political Compromise [cite: 9]</h3>
+                            <p class="text-lg text-pak-light-text mb-4">
+                                [cite_start]The period immediately following Pakistan’s independence was marked by political instability and deep disagreement over the new nation’s character[cite: 10]. [cite_start]Founding leader Muhammad Ali Jinnah had advocated for a modern, secular democracy where all citizens were equal, regardless of their faith[cite: 10]. [cite_start]However, many religious leaders and citizens insisted that the new state must fully reflect its Islamic identity[cite: 11].
+                            </p>
+                            <h4 class="text-xl font-semibold mb-2">1. Liaquat Ali Khan's Solution</h4>
+                            <p class="text-pak-light-text mb-4">
+                                [cite_start]Prime Minister Liaquat Ali Khan saw the Objectives Resolution as a way to resolve this conflict[cite: 11]. [cite_start]It was a strategic document designed to satisfy religious demands by confirming the state's Islamic foundation, and also assure modernists and minorities that governance would remain democratic and inclusive[cite: 13, 14].
+                            </p>
+                             <h4 class="text-xl font-semibold mb-2">2. Opposition and Dualism</h4>
+                            <p class="text-pak-light-text mb-4">
+                                [cite_start]The Resolution faced strong opposition from minority members in the Constituent Assembly, such as Sris Chandra Chattopadhyaya, who worried it would lead to a theocratic state[cite: 15]. [cite_start]Despite this opposition, it passed by successfully framing a fundamental dualism: Sovereignty belongs to Allah, but the state’s power is exercised by the chosen representatives of the people[cite: 15]. [cite_start]This blend of divine ideology and secular mechanism permanently defined Pakistan’s political system[cite: 16].
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="or_day3" class="or-tab-content space-y-6 hidden">
+                         <div class="content-card fade-in">
+                            [cite_start]<h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 3: Core Clauses and Constitutional Dualism [cite: 17, 23]</h3>
+                            <p class="text-lg text-pak-light-text mb-4">
+                                [cite_start]The Objectives Resolution contains several declarations that lay the philosophical groundwork for Pakistan[cite: 16].
+                            </p>
+                            <h4 class="text-xl font-semibold mb-2">1. Core Clauses</h4>
+                            <ul class="custom-list">
+                                [cite_start]<li><strong>Sovereignty of Allah:</strong> It declares that sovereignty belongs to Allah Almighty alone[cite: 18]. [cite_start]State authority is a "sacred trust" delegated to the people[cite: 19].</li>
+                                [cite_start]<li><strong>Representative Governance:</strong> It mandates that state powers must be exercised through the chosen representatives of the people, thereby establishing parliamentary democracy[cite: 20].</li>
+                                [cite_start]<li><strong>Islamic Principles:</strong> It requires that democratic concepts, freedom, and equality be observed "as enunciated by Islam"[cite: 21].</li>
+                                [cite_start]<li><strong>Minority Rights:</strong> It guarantees that minorities have the right to freely practice their religions and develop their cultures[cite: 22].</li>
+                            </ul>
+                            <h4 class="text-xl font-semibold mb-2 mt-4">2. The Constitutional Dualism</h4>
+                            <p class="text-pak-light-text mb-4">
+                                [cite_start]The tension between the modern democratic structure (Representative Governance) and the religious condition (Islamic Principles) created a fundamental dualism[cite: 24]. [cite_start]By subjecting concepts like democracy and equality to an Islamic yardstick, the Resolution introduced a divine source of law that could potentially override the will of the elected legislature[cite: 24]. [cite_start]This ambiguity meant that the interpretation of the Objectives Resolution, and not just the Constitution’s text, would determine the nation’s political and legal direction[cite: 24].
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="or_day4" class="or-tab-content space-y-6 hidden">
+                         <div class="content-card fade-in">
+                            [cite_start]<h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 4: Evolution in the 1956 and 1962 Constitutions [cite: 25]</h3>
+                             <p class="text-lg text-pak-light-text mb-4">
+                                [cite_start]The Objectives Resolution evolved from a mere political statement into a binding constitutional requirement across every constitution[cite: 26].
+                            </p>
+                            <h4 class="text-xl font-semibold mb-2">1. [cite_start]The 1956 Constitution [cite: 27]</h4>
+                            <ul class="custom-list">
+                                [cite_start]<li>The Objectives Resolution was formally included in the Preamble[cite: 28].</li>
+                                [cite_start]<li>It directly led to Pakistan being officially declared an "Islamic Republic"[cite: 29].</li>
+                                [cite_start]<li>Institutions were created to screen laws, ensuring they were not against the injunctions of Islam, giving the Resolution's mandate a practical implementation[cite: 30].</li>
+                            </ul>
+                             <h4 class="text-xl font-semibold mb-2 mt-4">2. [cite_start]The 1962 Constitution [cite: 31]</h4>
+                             <p class="text-pak-light-text mb-4">
+                                [cite_start]Even under the military regime of Ayub Khan, the Objectives Resolution was restored to the Preamble[cite: 32].
+                            </p>
+                            <ul class="custom-list">
+                                [cite_start]<li>The designation "Islamic Republic" was also restored[cite: 33].</li>
+                                [cite_start]<li>The Advisory Council of Islamic Ideology (CII) was established to officially check all laws against Islamic teachings, further institutionalizing the Resolution's influence[cite: 34].</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="or_day5" class="or-tab-content space-y-6 hidden">
+                         <div class="content-card fade-in">
+                            [cite_start]<h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 5: The 1973 Constitution and Article 2A [cite: 35]</h3>
+                            <h4 class="text-xl font-semibold mb-2">1. The 1973 Constitution</h4>
+                            <p class="text-pak-light-text mb-4">
+                                [cite_start]Initially, the Objectives Resolution was placed in the Preamble of the 1973 Constitution[cite: 36].
+                            </p>
+                             <h4 class="text-xl font-semibold mb-2">2. The Critical Change: The Eighth Amendment (1985)</h4>
+                            <p class="text-pak-light-text mb-4">
+                                [cite_start]In 1985, under General Zia-ul-Haq, the Eighth Amendment inserted the Objectives Resolution as Article 2A[cite: 37].
+                            </p>
+                            <ul class="custom-list">
+                                [cite_start]<li><strong>Momentous Impact:</strong> This move elevated the Resolution to a substantive, legally enforceable article of the Constitution, not just an introductory part[cite: 38].</li>
+                                [cite_start]<li><strong>Supreme Status:</strong> The Judiciary later confirmed the Resolution's position as the Grundnorm (the ultimate basic rule) of the Pakistani legal system, meaning all other laws and constitutional parts must comply with its spirit[cite: 39].</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="or_day6" class="or-tab-content space-y-6 hidden">
+                         <div class="content-card fade-in">
+                            [cite_start]<h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 6: Controversies and Enduring Legacy [cite: 40]</h3>
+                             <p class="text-lg text-pak-light-text mb-4">
+                                [cite_start]The Objectives Resolution has caused continuous debate, primarily due to the dualistic identity it imposed on Pakistan[cite: 41].
+                            </p>
+                            <h4 class="text-xl font-semibold mb-2">1. [cite_start]Core Controversies [cite: 42]</h4>
+                            <ul class="custom-list">
+                                [cite_start]<li><strong>Vague Language:</strong> The central criticism focuses on the clause that subjects democratic principles to the condition "as enunciated by Islam"[cite: 43].</li>
+                                [cite_start]<li><strong>Weapon of Ambiguity:</strong> Critics argue that this phrase is too vague and has been exploited by various military and political regimes to justify discriminatory laws, undermine democratic processes, and advance political Islamization[cite: 44].</li>
+                                [cite_start]<li><strong>Constitutional Crisis:</strong> The lack of a uniform interpretation of "Islam" allows different groups to redefine the state's direction, leading to a perpetual constitutional crisis[cite: 45].</li>
+                            </ul>
+                            <h4 class="text-xl font-semibold mb-2 mt-4">2. [cite_start]Enduring Legacy [cite: 46]</h4>
+                            <p class="text-pak-light-text mb-4">
+                                [cite_start]Despite the debates, the Resolution provides the state with internal legitimacy by fulfilling the ideological promise of a Muslim homeland[cite: 47]. [cite_start]It provides a basic, unifying ideological consensus for the majority population[cite: 48]. [cite_start]It also contains a clear constitutional commitment to guarantee the rights and cultural freedom of minorities, even though this commitment is often challenged in practice[cite: 49].
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        </main>
+
     <footer class="bg-pak-dark-text text-gray-300 py-12 px-6">
         <div class="container mx-auto text-center">
             <p>&copy; 2025 Pakistan Studies Learning Module. All content is for educational purposes.</p>
@@ -762,7 +857,7 @@
 
     <script>
         (function() {
-            'useS-trict';
+            'use strict'; // Fixed typo from 'useS-trict'
 
             document.addEventListener('DOMContentLoaded', function() {
 
@@ -818,6 +913,68 @@
                 const initialTab = document.getElementById('day1');
                 if (initialTab) {
                     triggerAnimations(initialTab);
+                }
+            });
+
+        })();
+
+        (function() {
+            'use strict';
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // --- Tab Switching Logic for OR Module ---
+                const orTabButtons = document.querySelectorAll('.or-tab-button');
+                const orTabContents = document.querySelectorAll('.or-tab-content');
+
+                // --- Scroll-based Fade-in Animation Logic ---
+                const orObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            orObserver.unobserve(entry.target); // Stop observing once it's visible
+                        }
+                    });
+                }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+                // Function to find and observe elements
+                function orTriggerAnimations(container) {
+                    const fadeElements = container.querySelectorAll('.fade-in');
+                    fadeElements.forEach(el => {
+                        // Reset for re-triggering if needed (though current logic is one-shot)
+                        el.classList.remove('visible'); 
+                        orObserver.observe(el);
+                    });
+                }
+
+                orTabButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const tabId = this.getAttribute('data-tab');
+
+                        // Update button active state
+                        orTabButtons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+
+                        // Show/hide content
+                        orTabContents.forEach(content => {
+                            if (content.id === tabId) {
+                                content.classList.remove('hidden');
+                                // Trigger animations for the new content
+                                orTriggerAnimations(content);
+                            } else {
+                                content.classList.add('hidden');
+                            }
+                        });
+                        
+                        // Scroll to the top of the new schedule section
+                        document.getElementById('schedule-or').scrollIntoView({ behavior: 'smooth' });
+                    });
+                });
+                
+                // Initial trigger for the default visible tab (Day 1)
+                const initialOrTab = document.getElementById('or_day1');
+                if (initialOrTab) {
+                    orTriggerAnimations(initialOrTab);
                 }
             });
 
