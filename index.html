@@ -26,6 +26,7 @@
             --pak-accent: #059669; /* Tailwind green-600 */
             --pak-dark-text: #1f2937; /* Tailwind gray-800 */
             --pak-light-text: #4b5563; /* Tailwind gray-600 */
+            --question-bg: #e0f2f1; /* Tailwind emerald-100 */
         }
 
         /* Animated Hero Graphic */
@@ -82,12 +83,34 @@
             color: var(--pak-light-text);
         }
         .custom-list li::before {
-            content: '✔';
+            content: '✓'; /* Simple checkmark */
             position: absolute;
             left: 0;
             top: 0;
             color: var(--pak-accent);
             font-weight: 800;
+        }
+
+        .exam-question {
+            background-color: var(--question-bg);
+            border-left: 5px solid var(--pak-accent);
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+        .exam-question h4 {
+            color: var(--pak-dark-text);
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .exam-question h4::before {
+            content: 'Q:'; /* Simple 'Q:' */
+            margin-right: 8px;
+            font-size: 1.25rem;
+            color: var(--pak-accent);
         }
     </style>
 </head>
@@ -157,7 +180,7 @@
                         <h4 class="text-xl font-semibold mb-2">1. Geographical Location</h4>
                         <p class="text-pak-light-text mb-4">
                             Pakistan is strategically located in South Asia, bridging the regions of South Asia, Central Asia, and the Middle East.
-                            Its precise location is between $23.5^{\circ}$ and $37.5^{\circ}$ north latitude and $60.8^{\circ}$ and $77.5^{\circ}$ east longitude.
+                            Its precise location is between 23.5 and 37.5 degrees north latitude and 60.8 and 77.5 degrees east longitude.
                             It is bordered by India to the east, Afghanistan to the west and north, Iran to the southwest, and China to the northeast. To the south is its 1,046-kilometer coastline along the Arabian Sea.
                         </p>
                         
@@ -192,26 +215,36 @@
                             The land of modern-day Pakistan is a cradle of ancient civilizations, with a history stretching back millennia. It was not an empty land; it was the center of sophisticated human societies.
                         </p>
                         
-                        <h4 class="text-xl font-semibold mb-2">1. Mehrgarh Civilization (c. $7000$-$2500$ BCE)</h4>
+                        <h4 class="text-xl font-semibold mb-2">1. Mehrgarh Civilization (c. 7000-2500 BCE)</h4>
                         <p class="text-pak-light-text mb-4">
                             Located in modern-day Balochistan, Mehrgarh is one of the earliest known sites in South Asia with evidence of farming and herding. It shows a gradual development from small agricultural villages to a more complex society, setting the stage for the great civilization that followed.
                         </p>
                         
-                        <h4 class="text-xl font-semibold mb-2">2. Indus Valley Civilization (c. $3300$-$1300$ BCE)</h4>
+                        <h4 class="text-xl font-semibold mb-2">2. Indus Valley Civilization (c. 3300-1300 BCE)</h4>
                         <p class="text-pak-light-text mb-4">
-                            This was one of the world's three earliest urban civilizations, alongside Mesopotamia and Ancient Egypt.
+                            This was one of the world's three earliest urban civilizations.
                         </p>
                         <ul class="custom-list">
                             <li><strong>Major Cities:</strong> The two most famous cities, Harappa (in Punjab) and Mohenjo-Daro (in Sindh), are both in Pakistan.</li>
                             <li><strong>Advanced Urban Planning:</strong> These cities featured grid-like street patterns, sophisticated drainage and sewer systems, and multi-story brick houses.</li>
-                            <li><strong>Economy and Trade:</strong> They had a standardized system of weights and measures and traded extensively with other civilizations, including Mesopotamia (modern-day Iraq).</li>
+                            <li><strong>Economy and Trade:</strong> They had a standardized system of weights and measures and traded extensively with other civilizations, including Mesopotamia.</li>
                             <li><strong>Writing System:</strong> They had a unique, undeciphered script, known as the Indus Script.</li>
                         </ul>
                         
-                        <h4 class="text-xl font-semibold mb-2">3. Gandhara Civilization (c. $1500$ BCE - $500$ CE)</h4>
+                        <h4 class="text-xl font-semibold mb-2">3. Gandhara Civilization (c. 1500 BCE - 500 CE)</h4>
                         <p class="text-pak-light-text mb-4">
-                            Centered in northern Pakistan (Peshawar, Taxila, and Swat), Gandhara was a major hub of Buddhism. Its unique significance comes from its fusion of cultures. After Alexander the Great's invasion, Hellenistic (Greek) culture blended with local Indian and Buddhist traditions, creating the famous Greco-Buddhist art. The city of Taxila was a world-renowned center of learning, attracting scholars from all over Asia.
+                            Centered in northern Pakistan (Peshawar, Taxila, and Swat), Gandhara was a major hub of Buddhism. Its unique significance comes from its fusion of cultures. After Alexander the Great's invasion, Hellenistic (Greek) culture blended with local Indian and Buddhist traditions, creating the famous Greco-Buddhist art. The city of Taxila was a world-renowned center of learning.
                         </p>
+                    </div>
+
+                    <!-- Exam Questions Day 1 -->
+                    <div class="exam-question fade-in">
+                        <h4>Practice Exam Questions for Day 1</h4>
+                        <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                            <li><strong>Long Answer (15 Marks):</strong> Analyze the Geographical Significance of Pakistan, highlighting its role as a strategic bridge between three major regions and its economic importance in the context of CPEC.</li>
+                            <li><strong>Short Note (10 Marks):</strong> Write a detailed note on the Urban Planning and Architectural Features of the Indus Valley Civilization cities of Mohenjo-Daro and Harappa.</li>
+                            <li><strong>Brief Answer (5 Marks):</strong> Explain the historical significance of the Gandhara Civilization, focusing on its cultural fusion and major center of learning.</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -222,12 +255,12 @@
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 3: Factors Leading to the Creation of Pakistan</h3>
                         
                         <p class="text-lg text-pak-light-text mb-4">
-                            The creation of Pakistan in 1947 was not a sudden event. It was the culmination of a long historical process and several key factors that led the Muslims of British India to demand a separate homeland.
+                            The creation of Pakistan in 1947 was the culmination of a long historical process and several key factors that led the Muslims of British India to demand a separate homeland.
                         </p>
                         
                         <h4 class="text-xl font-semibold mb-2">1. The Two-Nation Theory</h4>
                         <p class="text-pak-light-text mb-4">
-                            This was the core ideological foundation. The theory asserted that Muslims and Hindus were two distinct nations, not just two different religious communities. Their cultures, traditions, laws, and historical heroes were so different that they could not be merged into a single nation-state. It was argued that a united, democratic India would inevitably lead to the domination of the Hindu majority over the Muslim minority.
+                            This was the core ideological foundation, asserting that Muslims and Hindus were two distinct nations. Their cultures, traditions, laws, and historical heroes were so different that they could not be merged into a single nation-state, arguing that a united India would inevitably lead to the domination of the Hindu majority over the Muslim minority.
                         </p>
                         
                         <h4 class="text-xl font-semibold mb-2">2. Hindu-Urdu Controversy (1867)</h4>
@@ -237,22 +270,22 @@
                         
                         <h4 class="text-xl font-semibold mb-2">3. Political and Economic Disparity</h4>
                         <p class="text-pak-light-text mb-4">
-                            After the 1857 War of Independence, Muslims were often viewed with suspicion by the British and lagged behind the Hindu community in education, economic opportunities, and government employment. This created a sense of economic and political vulnerability.
+                            After the 1857 War of Independence, Muslims lagged behind the Hindu community in education, economic opportunities, and government employment, creating a sense of economic and political vulnerability.
                         </p>
 
                         <h4 class="text-xl font-semibold mb-2">4. Failure of Political Safeguards</h4>
                         <p class="text-pak-light-text mb-4">
-                            Attempts to create political safeguards for Muslims within a united India, such as the Lucknow Pact (1916) and the Delhi Proposals (1927), ultimately failed. The rejection of the Nehru Report (1928) by the Muslim League, which Jinnah described as the "parting of the ways," confirmed fears that their political demands would not be met.
+                            Attempts to create political safeguards for Muslims within a united India, such as the Lucknow Pact (1916), ultimately failed. The rejection of the Nehru Report (1928) by the Muslim League confirmed fears that their political demands would not be met.
                         </p>
                         
                         <h4 class="text-xl font-semibold mb-2">5. The Experience of Congress Rule (1937-1939)</h4>
                         <p class="text-pak-light-text mb-4">
-                            When the Indian National Congress formed provincial governments, the Muslim League reported widespread grievances. These included the promotion of Hindu symbols in public schools (like the Bande Mataram song) and alleged discrimination against Muslims. This brief period of rule was seen as a preview of what permanent Hindu-majority rule would look like, which greatly strengthened the case for a separate state.
+                            When the Indian National Congress formed provincial governments, the Muslim League reported widespread grievances, including the promotion of Hindu symbols. This brief period was seen as a preview of what permanent Hindu-majority rule would look like, strengthening the case for a separate state.
                         </p>
 
                         <h4 class="text-xl font-semibold mb-2">6. The Lahore Resolution (1940)</h4>
                         <p class="text-pak-light-text mb-4">
-                            This was the decisive moment. At its annual session in Lahore, the All-India Muslim League formally adopted a resolution demanding that "geographically contiguous units... in which the Muslims are numerically in a majority... should be grouped to constitute 'Independent States' in which the constituent units shall be autonomous and sovereign." This was the first official demand for what would become Pakistan.
+                            This was the decisive moment where the All-India Muslim League formally adopted a resolution demanding that Muslim-majority areas in the northwest and east should be grouped to constitute 'Independent States' (later clarified as a single state). This was the first official demand for what would become Pakistan.
                         </p>
                     </div>
                     
@@ -261,17 +294,17 @@
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 4: Political, Educational, and Religious Services of Sir Syed Ahmad Khan</h3>
                         
                         <p class="text-lg text-pak-light-text mb-4">
-                            Sir Syed Ahmad Khan (1817-1898) was the most important Muslim reformer and leader in $19^{\text{th}}$-century India. He is widely considered the father of the Two-Nation Theory and the intellectual force that revived the Muslim community after the 1857 revolt.
+                            Sir Syed Ahmad Khan (1817-1898) was the most important Muslim reformer and leader in 19th-century India, widely considered the father of the Two-Nation Theory.
                         </p>
                         
                         <h4 class="text-xl font-semibold mb-2">1. Educational Services (The Aligarh Movement)</h4>
                         <p class="text-pak-light-text mb-4">
-                            Sir Syed's greatest contribution. He believed that the only way for Muslims to recover was to embrace modern, Western education and science.
+                            He believed the only way for Muslims to recover was to embrace modern, Western education and science.
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Scientific Society (1864):</strong> He established this society to translate modern scientific works from English into Urdu, making knowledge accessible.</li>
-                            <li><strong>MAO College (1875):</strong> He founded the Muhammadan Anglo-Oriental College in Aligarh. This was not just a college; it was a movement. It aimed to create a new generation of Muslim leaders who were educated in Western science and arts but also grounded in their own Islamic faith.</li>
-                            <li><strong>Aligarh Muslim University:</strong> The MAO College later grew to become the Aligarh Muslim University, which served as the main intellectual and political center for the Pakistan Movement.</li>
+                            <li><strong>Scientific Society (1864):</strong> Established to translate modern scientific works from English into Urdu.</li>
+                            <li><strong>MAO College (1875):</strong> Founded the Muhammadan Anglo-Oriental College in Aligarh. It aimed to create a new generation of Muslim leaders educated in Western science and arts but grounded in Islamic faith.</li>
+                            <li><strong>Aligarh Muslim University:</strong> The MAO College later grew to become the main intellectual and political center for the Pakistan Movement.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">2. Political Services</h4>
@@ -279,14 +312,24 @@
                             He provided a new political direction for the Muslim community.
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Reconciliation with the British:</strong> After the 1857 War, he wrote "The Causes of the Indian Revolt," arguing that the revolt was caused by British misunderstanding, not a Muslim conspiracy. He worked to repair the relationship between Muslims and the British rulers.</li>
-                            <li><strong>Two-Nation Theory:</strong> He was the first to articulate that Hindus and Muslims were two separate nations (qawm). He advised Muslims to stay away from the Indian National Congress (founded in 1885), arguing that a system of majority rule would be detrimental to Muslims.</li>
+                            <li><strong>Reconciliation with the British:</strong> He wrote "The Causes of the Indian Revolt" to repair the relationship between Muslims and the British rulers.</li>
+                            <li><strong>Two-Nation Theory:</strong> He was the first to articulate that Hindus and Muslims were two separate nations, advising Muslims to stay away from the Indian National Congress.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">3. Religious Services</h4>
                         <p class="text-pak-light-text mb-4">
-                            Sir Syed was also a religious reformer. He advocated for a rational and modern interpretation of Islam, arguing that the true word of God (the Quran) could not be in conflict with the work of God (the laws of nature and science). He wrote extensive commentaries on the Quran to promote this modern, rationalist viewpoint.
+                            He advocated for a rational and modern interpretation of Islam, arguing that the true word of God (the Quran) could not be in conflict with the work of God (the laws of nature and science).
                         </p>
+                    </div>
+
+                    <!-- Exam Questions Day 2 -->
+                    <div class="exam-question fade-in">
+                        <h4>Practice Exam Questions for Day 2</h4>
+                        <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                            <li><strong>Long Answer (15 Marks):</strong> Discuss the factors that strengthened the demand for a separate Muslim state between 1867 and 1940. How did the Lahore Resolution formalize this demand?</li>
+                            <li><strong>Short Note (10 Marks):</strong> Critically analyze the political and educational contributions of Sir Syed Ahmad Khan to the revival of the Muslim community in the subcontinent.</li>
+                            <li><strong>Brief Answer (5 Marks):</strong> What was the significance of the Hindu-Urdu Controversy in initiating the concept of separate Muslim political identity?</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -297,61 +340,46 @@
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lectures 5 and 6: Formative Phase Part 1 and 2 (1947-1958)</h3>
                         
                         <p class="text-lg text-pak-light-text mb-4">
-                            The "formative phase" refers to the first decade of Pakistan's existence, from 1947 to the first military coup in 1958. This was a period of immense challenges, where the very survival of the new nation was at stake.
+                            The "formative phase" refers to the first decade of Pakistan's existence, a period of immense challenges where the very survival of the new nation was at stake.
                         </p>
 
                         <h4 class="text-2xl font-semibold mb-3">Formative Phase Part 1: The Initial Crisis (1947-1951)</h4>
                         
-                        <h4 class="text-xl font-semibold mb-2">1. The Refugee Crisis</h4>
+                        <h4 class="text-xl font-semibold mb-2">1. The Refugee Crisis and Administrative Collapse</h4>
                         <p class="text-pak-light-text mb-4">
-                            The partition triggered one of the largest and most violent migrations in human history. Millions of Muslims fled India for Pakistan, and millions of Hindus and Sikhs fled Pakistan for India. The new, resource-poor government of Pakistan had to manage the task of feeding, housing, and integrating over 7 million refugees.
+                            The partition triggered one of the largest and most violent migrations in human history. The new government had to manage the task of feeding, housing, and integrating over 7 million refugees while simultaneously building a central government, bureaucracy, and army from scratch with almost no inherited machinery.
                         </p>
 
-                        <h4 class="text-xl font-semibold mb-2">2. Administrative Collapse</h4>
+                        <h4 class="text-xl font-semibold mb-2">2. Division of Assets and Kashmir</h4>
                         <p class="text-pak-light-text mb-4">
-                            Pakistan inherited almost no central government machinery. It had to build a capital city (Karachi, initially), a bureaucracy, a central bank, and an army from scratch. There was a severe shortage of trained personnel and basic office supplies.
-                        </p>
-
-                        <h4 class="text-xl font-semibold mb-2">3. Division of Assets</h4>
-                        <p class="text-pak-light-text mb-4">
-                            The division of British India's financial and military assets was a major dispute. Pakistan received only a small portion of the cash reserves and military equipment, which it argued was unfair and designed to cripple it from the start.
-                        </p>
-
-                        <h4 class="text-xl font-semibold mb-2">4. The Kashmir Dispute</h4>
-                        <p class="text-pak-light-text mb-4">
-                            The dispute over the princely state of Jammu and Kashmir began immediately. The Hindu ruler of the Muslim-majority state opted to join India, triggering the first Indo-Pakistani War (1947-48) and establishing a conflict that defines the region to this day.
+                            The division of British India's financial and military assets was highly disputed, with Pakistan receiving only a small, unfair portion. The conflict over the princely state of Jammu and Kashmir began immediately, triggering the first Indo-Pakistani War (1947-48) and establishing a defining conflict.
                         </p>
                         
-                        <h4 class="text-xl font-semibold mb-2">5. Death of Quaid-e-Azam</h4>
+                        <h4 class="text-xl font-semibold mb-2">3. Death of Quaid-e-Azam</h4>
                         <p class="text-pak-light-text mb-4">
-                            The death of the nation's founder, Muhammad Ali Jinnah, in September 1948 (just 13 months after independence) was a devastating blow. He was the one figure who commanded universal respect, and his loss created a leadership vacuum.
+                            The death of the nation's founder, Muhammad Ali Jinnah, in September 1948 (just 13 months after independence) was a devastating blow, creating a critical leadership vacuum during the most fragile period.
                         </p>
                         
                         <h4 class="text-2xl font-semibold mb-3 mt-6">Formative Phase Part 2: The Search for a Constitution (1951-1958)</h4>
                         
                         <h4 class="text-xl font-semibold mb-2">1. The Objectives Resolution (1949)</h4>
                         <p class="text-pak-light-text mb-4">
-                            This was the first major step towards a constitution. Passed by Prime Minister Liaquat Ali Khan, it laid down the guiding principles. It declared that sovereignty belongs to Allah and that Pakistan would be a democracy where principles of Islam, social justice, and equality would be upheld. It served as the preamble to all of Pakistan's future constitutions.
+                            Passed by Prime Minister Liaquat Ali Khan, this was the first major step towards a constitution. It declared that sovereignty belongs to Allah and that Pakistan would be a democracy where principles of Islam, social justice, and equality would be upheld. It served as the preamble to all of Pakistan's future constitutions.
                         </p>
                         
-                        <h4 class="text-xl font-semibold mb-2">2. Assassination of Liaquat Ali Khan (1951)</h4>
-                        <p class="text-pak-light-text mb-4">
-                            The assassination of the first Prime Minister, Liaquat Ali Khan, marked the end of the founding generation of leaders. His death led to a period of intense political instability, as politicians began to fight for power.
-                        </p>
-                        
-                        <h4 class="text-xl font-semibold mb-2">3. The Constitution of 1956</h4>
+                        <h4 class="text-xl font-semibold mb-2">2. The Constitution of 1956</h4>
                         <p class="text-pak-light-text mb-4">
                             After nine long years, Pakistan finally adopted its first constitution.
                         </p>
                         <ul class="custom-list">
                             <li>It officially declared the country the "Islamic Republic of Pakistan."</li>
                             <li>It established a parliamentary system of government.</li>
-                            <li>It resolved the major dispute between East and West Pakistan by creating the "One Unit" policy (merging all of West Pakistan into one province) and establishing "parity," giving both wings equal representation in parliament, despite East Pakistan having a larger population.</li>
+                            <li>It introduced the "One Unit" policy, merging all of West Pakistan into one province and establishing political parity (equal representation) between East and West Pakistan.</li>
                         </ul>
                         
-                        <h4 class="text-xl font-semibold mb-2">4. Failure of the 1956 Constitution</h4>
+                        <h4 class="text-xl font-semibold mb-2">3. Failure of the 1956 Constitution</h4>
                         <p class="text-pak-light-text mb-4">
-                            The constitution was short-lived. Political infighting, corruption, and rapidly changing governments (four prime ministers in two years) made the parliamentary system dysfunctional. The "One Unit" policy was deeply unpopular in the smaller provinces of West Pakistan.
+                            The constitution was short-lived due to intense political infighting, corruption, and rapidly changing governments, which made the parliamentary system dysfunctional.
                         </p>
                     </div>
                     
@@ -365,7 +393,7 @@
                         
                         <h4 class="text-xl font-semibold mb-2">1. The First Military Intervention (1958)</h4>
                         <p class="text-pak-light-text mb-4">
-                            Citing the political instability and corruption of the "formative phase," President Iskander Mirza abrogated the 1956 Constitution and declared martial law. He was quickly sidelined by the army chief, **General Ayub Khan**, who took full control. This set a precedent: the military viewed itself as the ultimate guardian of the state, intervening when it believed civilian politicians had failed.
+                            President Iskander Mirza abrogated the 1956 Constitution and declared martial law, citing political instability. He was quickly sidelined by the army chief, General Ayub Khan, who took full control. This set a precedent for the military viewing itself as the ultimate guardian of the state.
                         </p>
                         
                         <h4 class="text-xl font-semibold mb-2">2. Subsequent Military Regimes</h4>
@@ -373,18 +401,24 @@
                             There have been three other major periods of direct military rule:
                         </p>
                         <ul class="custom-list">
-                            <li><strong>General Yahya Khan (1969-1971):</strong> Took over from Ayub Khan, held Pakistan's first free and fair elections, but his failure to manage the political crisis led to the 1971 war and the separation of East Pakistan (Bangladesh).</li>
-                            <li><strong>General Zia-ul-Haq (1977-1988):</strong> Overthrew Zulfikar Ali Bhutto. His regime was defined by a controversial program of "Islamization" of law and society, and Pakistan's deep involvement in the Soviet-Afghan War.</li>
-                            <li><strong>General Pervez Musharraf (1999-2008):</strong> Overthrew Nawaz Sharif. His era was defined by the "War on Terror" after the $9/11$ attacks, economic liberalization, and a period of "enlightened moderation."</li>
+                            <li><strong>General Yahya Khan (1969-1971):</strong> Oversaw the 1971 war and the separation of East Pakistan (Bangladesh).</li>
+                            <li><strong>General Zia-ul-Haq (1977-1988):</strong> Defined by controversial "Islamization" policies and involvement in the Soviet-Afghan War.</li>
+                            <li><strong>General Pervez Musharraf (1999-2008):</strong> Defined by the "War on Terror" and a period of economic liberalization.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">3. Democratic Transitions</h4>
                         <p class="text-pak-light-text mb-4">
-                            Despite long military rule, democratic movements have repeatedly re-emerged.
+                            Democratic movements have repeatedly re-emerged, notably the civilian government of Zulfikar Ali Bhutto (1971-1977), which gave Pakistan the Constitution of 1973. Since 2008, Pakistan has seen a strengthening of democracy, marked by peaceful transfers of power between elected governments in 2013 and 2018.
                         </p>
-                        <ul class="custom-list">
-                            <li><strong>1971-1977:</strong> Zulfikar Ali Bhutto's civilian government, which gave Pakistan the Constitution of 1973.</li>
-                            <li><strong>2008-Present:</strong> The period since 2008 has seen a strengthening of democracy. In 2013, Pakistan experienced its first-ever peaceful, democratic transfer of power from one elected government to another, a milestone that was repeated in 2018.</li>
+                    </div>
+
+                    <!-- Exam Questions Day 3 -->
+                    <div class="exam-question fade-in">
+                        <h4>Practice Exam Questions for Day 3</h4>
+                        <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                            <li><strong>Long Answer (15 Marks):</strong> Describe the major political, administrative, and economic challenges Pakistan faced during the Formative Phase (1947-1951). How did the death of Jinnah impact this period?</li>
+                            <li><strong>Short Note (10 Marks):</strong> Critically analyze the core features and eventual failure of the Constitution of 1956. Specifically, discuss the "One Unit" policy.</li>
+                            <li><strong>Brief Answer (5 Marks):</strong> How did the Objectives Resolution (1949) lay the foundation for Pakistan's political and ideological framework?</li>
                         </ul>
                     </div>
                 </div>
@@ -396,36 +430,30 @@
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 8: River System: Indus River and its Tributaries</h3>
                         
                         <p class="text-lg text-pak-light-text mb-4">
-                            The river system is the lifeblood of Pakistan. The country's agriculture, population, and economy are all built around it. Pakistan's irrigation system is one of the largest continuous canal systems in the world.
+                            The Indus River system is the lifeblood of Pakistan, supporting the country's agriculture and population. Pakistan's irrigation system is one of the largest continuous canal systems in the world.
                         </p>
                         
-                        <h4 class="text-xl font-semibold mb-2">1. The Indus River</h4>
+                        <h4 class="text-xl font-semibold mb-2">1. The Indus River and Tributaries</h4>
                         <p class="text-pak-light-text mb-4">
-                            This is the main artery. It originates in the Tibetan Plateau, flows through Ladakh and Gilgit-Baltistan, and then travels the entire length of Pakistan, from north to south, before emptying into the Arabian Sea near Karachi. It is the primary source of water for the entire country.
-                        </p>
-                        
-                        <h4 class="text-xl font-semibold mb-2">2. The Tributaries (The "Punjab" River System)</h4>
-                        <p class="text-pak-light-text mb-4">
-                            The Indus is fed by several major tributaries, which are divided into two groups:
+                            The Indus River is the main artery, flowing the entire length of Pakistan from the Tibetan Plateau to the Arabian Sea. It is fed by several major tributaries:
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Eastern Tributaries:</strong> These are the five rivers of the Punjab (which means "Land of Five Rivers"): the **Jhelum, Chenab, Ravi, Beas, and Sutlej**. They all originate in or flow through India before entering Pakistan (except the Beas).</li>
-                            <li><strong>Western Tributaries:</strong> These include rivers like the **Kabul, Swat, and Gomal**, which flow from Afghanistan and the western mountains of Pakistan into the Indus.</li>
+                            <li><strong>Eastern Tributaries:</strong> The five rivers of the Punjab: the Jhelum, Chenab, Ravi, Beas, and Sutlej.</li>
+                            <li><strong>Western Tributaries:</strong> Rivers flowing from Afghanistan and the western mountains, such as the Kabul, Swat, and Gomal.</li>
                         </ul>
                         
-                        <h4 class="text-xl font-semibold mb-2">3. The Indus Water Treaty (1960)</h4>
+                        <h4 class="text-xl font-semibold mb-2">2. The Indus Water Treaty (1960)</h4>
                         <p class="text-pak-light-text mb-4">
-                            <strong>This is a critical concept.</strong> After partition, the headwaters of the eastern rivers (Ravi, Beas, Sutlej) were left in India, giving India control over Pakistan's water supply. This led to a major dispute.
+                            This is a critical water-sharing agreement, brokered by the World Bank, which divided the rivers between India and Pakistan to resolve post-partition disputes.
                         </p>
                         <ul class="custom-list">
-                            <li><strong>The Agreement:</strong> Brokered by the World Bank, the treaty divided the rivers.</li>
-                            <li><strong>India was given control</strong> of the three Eastern Rivers (Ravi, Beas, Sutlej).</li>
-                            <li><strong>Pakistan was given control</strong> of the three Western Rivers (Indus, Jhelum, Chenab).</li>
-                            <li><strong>Significance:</strong> This treaty is one of the few international water-sharing agreements that has survived multiple wars. It forced Pakistan to build a massive system of dams (like Tarbela and Mangla) and "link canals" to transfer water from its western rivers to the lands in Punjab that were once fed by the eastern rivers.</li>
+                            <li><strong>India's Control:</strong> The three Eastern Rivers (Ravi, Beas, Sutlej).</li>
+                            <li><strong>Pakistan's Control:</strong> The three Western Rivers (Indus, Jhelum, Chenab).</li>
+                            <li><strong>Significance:</strong> It forced Pakistan to build a massive system of dams (like Tarbela and Mangla) and link canals to manage its water supply, demonstrating its resilience in managing vital resources.</li>
                         </ul>
                     </div>
                     
-                    <!-- New Lecture 9: Physiography -->
+                    <!-- Lecture 9: Physiography -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 9: Physiography: Mountains, Plains, Plateaus, and Deserts</h3>
                         
@@ -433,23 +461,25 @@
                             Pakistan is topographically diverse, covering vast mountain ranges, fertile river plains, arid plateaus, and deserts. This diversity heavily influences its climate, agriculture, and population density.
                         </p>
                         
+                        
+                        
                         <h4 class="text-xl font-semibold mb-2">1. The Northern Mountain Systems</h4>
                         <p class="text-pak-light-text mb-2">
-                            These ranges are home to the highest peaks in the world and act as a critical climatic barrier, catching monsoon rains and storing glacial water.
+                            These ranges are home to the highest peaks in the world and act as a critical climatic barrier.
                         </p>
                         <ul class="custom-list mb-4">
-                            <li><strong>Karakoram Range:</strong> Located in the far north. Home to K2 (Mount Godwin Austen), the second-highest mountain in the world.</li>
-                            <li><strong>Himalayas:</strong> Stretches from the east. Includes peaks like Nanga Parbat.</li>
+                            <li><strong>Karakoram Range:</strong> Home to K2 (Mount Godwin Austen), the second-highest mountain in the world.</li>
+                            <li><strong>Himalayas:</strong> Includes peaks like Nanga Parbat.</li>
                             <li><strong>Hindu Kush Range:</strong> Located in the northwest, including the Tirich Mir peak. Contains historically important passes like the Khyber Pass.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">2. The Plateaus (Highlands)</h4>
                         <p class="text-pak-light-text mb-2">
-                            These elevated regions are generally drier and mineral-rich, often separated from the plains by smaller mountain ranges.
+                            These elevated regions are generally drier and mineral-rich.
                         </p>
                         <ul class="custom-list mb-4">
-                            <li><strong>Potwar Plateau & Salt Range:</strong> Located in northern Punjab, between the Indus and Jhelum rivers. It is highly dissected by erosion but rich in minerals (salt, coal, oil). The Salt Range contains the famous Khewra Salt Mine.</li>
-                            <li><strong>Balochistan Plateau:</strong> Covers the western and southern regions, separated from the Indus Plain by the Sulaiman and Kirthar Ranges. It is largely arid, characterized by inland drainage basins (like Hamun-i-Mashkel) and coastal areas (Makran Coast).</li>
+                            <li><strong>Potwar Plateau and Salt Range:</strong> Located in northern Punjab. Dissected by erosion but rich in minerals (salt, coal, oil). The Salt Range contains the famous Khewra Salt Mine.</li>
+                            <li><strong>Balochistan Plateau:</strong> Covers the western and southern regions, separated from the Indus Plain by the Sulaiman and Kirthar Ranges. It is largely arid, characterized by inland drainage basins and the Makran Coast.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">3. The Indus Plain and Deserts</h4>
@@ -457,9 +487,9 @@
                             The vast, fertile land formed by the Indus River and its tributaries is the economic heartland.
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Upper Indus Plain (Punjab):</strong> Formed by the five main rivers (Jhelum, Chenab, Ravi, Sutlej, Indus). It is the most densely populated and agriculturally productive region.</li>
-                            <li><strong>Lower Indus Plain (Sindh):</strong> Lies below Mithankot. This area is flatter, highly fertile near the river, but faces greater challenges with waterlogging, salinity, and proximity to deserts.</li>
-                            <li><strong>Deserts:</strong> Include the **Thar Desert** (Sindh/Punjab border), the **Cholistan Desert** (Punjab), and the **Thal Desert** (Punjab). They are characterized by extreme aridity and sand dunes.</li>
+                            <li><strong>Upper Indus Plain (Punjab):</strong> The most densely populated and agriculturally productive region.</li>
+                            <li><strong>Lower Indus Plain (Sindh):</strong> Flatter, highly fertile near the river, but faces challenges with waterlogging and salinity.</li>
+                            <li><strong>Deserts:</strong> Include the Thar Desert (Sindh/Punjab border), the Cholistan Desert (Punjab), and the Thal Desert (Punjab), all characterized by extreme aridity.</li>
                         </ul>
                     </div>
 
@@ -472,10 +502,10 @@
                         </p>
                         
                         <ul class="custom-list">
-                            <li><strong>Highland Climate (North and West):</strong> Found in the northern mountains (Himalayas, Karakoram, Hindu Kush) and western Balochistan. This region has cold, snowy winters and mild, pleasant summers.</li>
-                            <li><strong>Lowland Climate (Indus Plain):</strong> This covers most of the populated areas in Punjab and Sindh. It is a climate of extremes: very hot summers (with temperatures often exceeding $45^{\circ}\text{C}$) and cool, dry winters. This region receives most of its rainfall during the summer Monsoon season (July-September).</li>
-                            <li><strong>Arid (Desert) Climate (Southeast):</strong> Found in the Thar Desert in Sindh and Cholistan in Punjab. This region is extremely hot and dry, with very little rainfall (less than $125\text{mm}$ per year).</li>
-                            <li><strong>Coastal Climate (South):</strong> Along the Arabian Sea coastline (Karachi, Gwadar). This region has a mild, humid climate with less variation in temperature between summer and winter due to the moderating effect of the sea.</li>
+                            <li><strong>Highland Climate:</strong> Found in the northern mountains and western Balochistan. Cold, snowy winters and mild, pleasant summers.</li>
+                            <li><strong>Lowland Climate:</strong> Covers most of the Indus Plain (Punjab and Sindh). Climate of extremes: very hot summers (greater than 45 degrees C) and cool, dry winters. Receives most rainfall during the summer Monsoon season.</li>
+                            <li><strong>Arid (Desert) Climate:</strong> Found in the Thar and Cholistan Deserts. Extremely hot and dry, with very little rainfall (less than 125mm per year).</li>
+                            <li><strong>Coastal Climate:</strong> Along the Arabian Sea coastline (Karachi, Gwadar). Mild, humid climate with less temperature variation due to the moderating effect of the sea.</li>
                         </ul>
                     </div>
                     
@@ -485,57 +515,43 @@
                         
                         <h4 class="text-xl font-semibold mb-2">1. Socio-Cultural Diversity</h4>
                         <p class="text-pak-light-text mb-4">
-                            Pakistan is not a single, uniform culture. It is a rich mosaic of many different cultures, ethnic groups, and languages, all bound together by a shared Pakistani identity and the common faith of Islam.
+                            Pakistan is a rich mosaic of many different cultures, ethnic groups, and languages, all bound together by a shared Pakistani identity and the common faith of Islam.
                         </p>
                         
-                        <h4 class="text-xl font-semibold mb-2">2. Difference Between Culture and Society</h4>
+                        <h4 class="text-xl font-semibold mb-2">2. Culture, Society, and National Unity</h4>
                         <p class="text-pak-light-text mb-4">
-                            These two terms are related but different.
+                            Society refers to the social structure and institutions (hardware), while Culture refers to the shared way of life, beliefs, and traditions (software). The glue holding the nation together is the shared faith of Islam, the national language of Urdu (the lingua franca), and shared values like hospitality.
                         </p>
-                        <ul class="custom-list">
-                            <li><strong>Society:</strong> This refers to the group of people and the social structure they live in. It is the "hardware" – the institutions, the government, the economy, the family structures.</li>
-                            <li><strong>Culture:</strong> This refers to the shared way of life of that group. It is the "software" – the beliefs, values, languages, clothing, food, music, and traditions that are passed down through generations.</li>
-                        </ul>
                         
-                        <h4 class="text-xl font-semibold mb-2">3. Role of Culture in Shaping Nation</h4>
-                        <p class="text-pak-light-text mb-4">
-                            Culture is the "glue" that holds a nation together. While Pakistan has immense ethnic diversity, a shared national culture has been promoted. This includes:
-                        </p>
-                        <ul class="custom-list">
-                            <li><strong>Islam:</strong> The shared faith of over 95 percent of the population provides a common set of values and ethics.</li>
-                            <li><strong>Urdu:</strong> The national language, which acts as a "lingua franca" or bridge language, allowing people from different ethnic groups to communicate.</li>
-                            <li><strong>Shared Values:</strong> Concepts like respect for elders, hospitality, and strong family ties are common across all regional cultures.</li>
-                        </ul>
-                        
-                        <h4 class="text-xl font-semibold mb-2">4. Ethnic and Regional Diversity (Cultural Map)</h4>
+                        <h4 class="text-xl font-semibold mb-2">3. Ethnic and Regional Diversity (Cultural Map)</h4>
                         <p class="text-pak-light-text mb-4">
                             The four major provinces are home to distinct ethno-linguistic groups:
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Punjab:</strong> Home to the Punjabis, the largest ethnic group. Their culture is known for its vibrant music (Bhangra), rich food, and Sufi shrines.</li>
+                            <li><strong>Punjab:</strong> Home to the Punjabis (largest ethnic group), known for their vibrant music (Bhangra).</li>
                             <li><strong>Sindh:</strong> Home to the Sindhis, with a culture deeply rooted in the ancient Indus Valley and the poetry of Sufi saints like Shah Abdul Latif Bhittai.</li>
-                            <li><strong>Khyber Pakhtunkhwa (KPK):</strong> Home to the Pashtuns, who live by a strong code of honor known as "Pashtunwali," which emphasizes hospitality, bravery, and justice.</li>
-                            <li><strong>Balochistan:</strong> Home to the Baloch and Brahui peoples, with a culture shaped by its rugged, mountainous landscape and a strong tribal structure.</li>
+                            <li><strong>Khyber Pakhtunkhwa (KPK):</strong> Home to the Pashtuns, who live by a strong code of honor known as "Pashtunwali" (hospitality, bravery).</li>
+                            <li><strong>Balochistan:</strong> Home to the Baloch and Brahui peoples, with a strong tribal structure shaped by its rugged landscape.</li>
                         </ul>
                         
-                        <h4 class="text-xl font-semibold mb-2">5. Social Institutions and Norms</h4>
+                        <h4 class="text-xl font-semibold mb-2">4. Social Institutions and Norms</h4>
                         <p class="text-pak-light-text mb-4">
-                            This refers to the core institutions of Pakistani society.
+                            Core institutions include the Joint Family (the most important social unit), the Biradari (kinship network), and Religion (Islam, a complete social and legal code). Traditional social structures like Feudalism (large landowners) and Tribalism (chiefs/sardars) still dominate many rural areas.
                         </p>
-                        <ul class="custom-list">
-                            <li><strong>The Family:</strong> The most important social institution. It is traditionally a joint-family or extended-family system, where multiple generations live together.</li>
-                            <li><strong>The Biradari (Kinship):</strong> A broader network of kinship and clan affiliation, playing a major role in social life, especially in rural areas, influencing marriages, politics, and business.</li>
-                            <li><strong>Religion:</strong> Islam is a complete social and legal code that governs daily life, from festivals (Eid) to law and community norms.</li>
-                            <li><strong>Feudalism and Tribalism:</strong> In many rural parts, the social structure is still dominated by large landowners (feudals) or tribal chiefs (sardars) who hold immense social and political power.</li>
-                        </ul>
                         
-                        <h4 class="text-xl font-semibold mb-2">6. Urban and Rural Cultural Contrast</h4>
+                        <h4 class="text-xl font-semibold mb-2">5. Urban and Rural Cultural Contrast</h4>
                         <p class="text-pak-light-text mb-4">
-                            There is a significant difference between life in Pakistan's villages and its big cities.
+                            Rural Culture is more traditional, conservative, and group-oriented, revolving around agriculture and the biradari. Urban Culture (Karachi, Lahore) is more modern, individualistic, and diverse, often shifting to the nuclear family system.
                         </p>
-                        <ul class="custom-list">
-                            <li><strong>Rural Culture:</strong> More traditional, conservative, and group-oriented. Life revolves around agriculture, family, and local biradari. Social change is slow.</li>
-                            <li><strong>Urban Culture:</strong> More modern, individualistic, and diverse. Cities like Karachi, Lahore, and Islamabad are centers of education, industry, and new ideas. The joint-family system is often replaced by the "nuclear family" (parents and children only).</li>
+                    </div>
+
+                    <!-- Exam Questions Day 4 -->
+                    <div class="exam-question fade-in">
+                        <h4>Practice Exam Questions for Day 4</h4>
+                        <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                            <li><strong>Long Answer (15 Marks):</strong> Describe the main Physiographic Divisions of Pakistan (Mountains, Plateaus, and Plains). How do these geographical features affect the climate and economic activity of their respective regions?</li>
+                            <li><strong>Short Note (10 Marks):</strong> Write a detailed note on the Indus Water Treaty (1960), explaining its key provisions and its long-term significance for Pakistan's agricultural sector.</li>
+                            <li><strong>Brief Answer (5 Marks):</strong> Differentiate between the Highland Climate and the Lowland Climate regions of Pakistan, giving examples of provinces covered by each.</li>
                         </ul>
                     </div>
                 </div>
@@ -548,22 +564,21 @@
                         
                         <h4 class="text-xl font-semibold mb-2">1. Language</h4>
                         <p class="text-pak-light-text mb-4">
-                            Pakistan is a multilingual country with over 70 languages.
+                            Pakistan is a multilingual country.
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Urdu (National Language):</strong> While it is the mother tongue of only about 8 percent of the population (mostly Muhajirs), it is the national language and serves as the unifying "lingua franca" understood by most Pakistanis.</li>
-                            <li><strong>English (Official Language):</strong> A legacy of the British era, English is the language of the government, the legal system, higher education, and corporate business.</li>
-                            <li><strong>Regional Languages:</strong> These are the mother tongues of the majority: Punjabi (spoken by the largest number of people), Sindhi, Pashto, Balochi, and Seraiki. There is a rich cultural tradition and political identity associated with each.</li>
+                            <li><strong>Urdu (National Language):</strong> Serves as the unifying "lingua franca" understood by most Pakistanis.</li>
+                            <li><strong>English (Official Language):</strong> The language of government, law, higher education, and corporate business.</li>
+                            <li><strong>Regional Languages:</strong> The mother tongues of the majority: Punjabi (largest number of speakers), Sindhi, Pashto, Balochi, and Seraiki.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">2. Literature</h4>
                         <p class="text-pak-light-text mb-4">
-                            Pakistani literature exists in all its major languages, but its most famous expressions are in Urdu and English.
+                            Pakistani literature exists in all major languages.
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Urdu Literature:</strong> Pakistan inherited a rich tradition of Urdu poetry (from Ghalib, Iqbal) and fiction. Major writers include **Faiz Ahmad Faiz** (a celebrated poet) and **Saadat Hasan Manto** (a master of the short story, writing about the horrors of partition).</li>
-                            <li><strong>Regional Literature:</strong> There is a powerful tradition of Sufi poetry in regional languages, such as the works of **Shah Abdul Latif Bhittai** (Sindhi) and **Bulleh Shah** (Punjabi).</li>
-                            <li><strong>Pakistani English Literature:</strong> In recent decades, Pakistani writers in English (like Mohsin Hamid, Kamila Shamsie) have gained global acclaim for their novels.</li>
+                            <li><strong>Urdu Literature:</strong> Post-independence voices like Faiz Ahmad Faiz (celebrated poet) and Saadat Hasan Manto (master of the short story, writing about Partition).</li>
+                            <li><strong>Regional Literature:</strong> Powerful tradition of Sufi poetry (e.g., Shah Abdul Latif Bhittai in Sindhi and Bulleh Shah in Punjabi).</li>
                         </ul>
                     </div>
                     
@@ -572,34 +587,25 @@
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 13: Agriculture and Industrial Sectors of Pakistan</h3>
                         
                         <p class="text-lg text-pak-light-text mb-4">
-                            The economy of Pakistan stands on two pillars: agriculture and industry.
+                            The economy stands on two pillars: agriculture (the foundation) and industry (the engine).
                         </p>
                         
                         <h4 class="text-xl font-semibold mb-2">1. Agriculture (The Backbone)</h4>
                         <p class="text-pak-light-text mb-4">
-                            Agriculture is the foundation of the economy. While it contributes less to the total GDP (around 22 percent) than the services sector, it is still vital because it:
+                            Agriculture is vital because it employs the most people (approximately 37%) and provides raw materials.
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Employs the most people:</strong> About 37 percent of the labor force works in agriculture.</li>
-                            <li><strong>Feeds the nation:</strong> Ensures food security.</li>
-                            <li><strong>Provides raw materials:</strong> It provides the cotton for the textile industry and sugarcane for the sugar industry.</li>
-                        </ul>
-                        <p class="text-pak-light-text mb-4 mt-4">
-                            <strong>Major Crops:</strong>
-                        </p>
-                        <ul class="custom-list">
-                            <li><strong>Rabi Crops (Winter):</strong> Sown in winter, harvested in spring. The main rabi crop is **Wheat**.</li>
-                            <li><strong>Kharif Crops (Summer):</strong> Sown in summer, harvested in autumn. Main kharif crops are **Cotton, Rice, and Sugarcane**.</li>
+                            <li><strong>Rabi Crops (Winter):</strong> Sown in winter, harvested in spring. Main crop is Wheat.</li>
+                            <li><strong>Kharif Crops (Summer):</strong> Sown in summer, harvested in autumn. Main crops are Cotton, Rice, and Sugarcane.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">2. Industry (The Engine)</h4>
                         <p class="text-pak-light-text mb-4">
-                            The industrial sector is the engine of economic growth and high-value exports.
+                            The industrial sector is the source of economic growth and exports.
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Textile Industry:</strong> This is the single most important industry in Pakistan. It is the largest manufacturing sector and the source of over 60 percent of the country's total export earnings.</li>
-                            <li><strong>Other Major Industries:</strong> These include cement (for construction), sugar (processing sugarcane), fertilizer (for agriculture), and food processing.</li>
-                            <li><strong>Small-Scale Industry:</strong> A vital part of the economy, including surgical instruments (Sialkot is a world leader), sports goods, and carpets.</li>
+                            <li><strong>Textile Industry:</strong> The single most important industry, providing over 60% of total export earnings.</li>
+                            <li><strong>Other Major Industries:</strong> Cement, sugar, fertilizer, and food processing.</li>
                         </ul>
                     </div>
                     
@@ -608,64 +614,54 @@
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 14: Needs of Dams for Agriculture and Industry</h3>
                         
                         <p class="text-lg text-pak-light-text mb-4">
-                            Water management is Pakistan's most critical long-term challenge. The country is rapidly becoming "water-scarce." Building dams is presented as the primary solution.
+                            Water management is Pakistan's most critical long-term challenge, as the country is rapidly becoming "water-scarce."
                         </p>
                         
                         <h4 class="text-xl font-semibold mb-2">1. Need for Agriculture</h4>
                         <p class="text-pak-light-text mb-4">
-                            Pakistan's agriculture is entirely dependent on irrigation from the Indus River.
+                            Dams are essential for water storage, as most of the water flows during the monsoon months (July-September). Dams (like Tarbela and Mangla) store this excess water for use during the dry winter (Rabi) season.
                         </p>
-                        <ul class="custom-list">
-                            <li><strong>Water Storage:</strong> Most of the Indus river system's water flows during the three monsoon months (July-September) and is lost to the sea if not stored. Dams (like **Tarbela Dam** and **Mangla Dam**) store this excess water for use during the dry winter (Rabi) season.</li>
-                            <li><strong>Control and Distribution:</strong> Dams allow for a controlled, predictable release of water into the canal system.</li>
-                        </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">2. Need for Industry</h4>
                         <p class="text-pak-light-text mb-4">
-                            The industrial sector is crippled by chronic energy shortages.
-                        </p>
-                        <ul class="custom-list">
-                            <li><strong>Hydroelectric Power:</strong> Dams are the cheapest, cleanest, and most sustainable source of electricity. Hydropower reduces the cost of manufacturing, making industries more competitive.</li>
-                            <li><strong>Flood Control:</strong> Dams also serve the crucial purpose of flood control by holding back dangerously high levels of water during peak monsoons.</li>
-                        </ul>
-                        <p class="text-pak-light-text mt-4">
-                            <strong>Key Fact:</strong> The storage capacity of existing dams has been reduced due to "siltation" (silt and mud settling at the bottom). This drives the desperate need for new, large dams like the **Diamer-Bhasha Dam**.
+                            The industrial sector needs reliable, cheap energy. Dams provide Hydroelectric Power—the cheapest, cleanest source of electricity—which reduces manufacturing costs. Dams also provide crucial flood control.
                         </p>
                     </div>
 
-                    <!-- New Lecture 15: Economic Challenges -->
+                    <!-- Lecture 15: Economic Challenges -->
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 15: Major Economic Challenges of Pakistan</h3>
                         
                         <p class="text-lg text-pak-light-text mb-4">
-                            The economy faces structural, financial, and development hurdles that hinder long-term growth and stability. Understanding these challenges is crucial for analyzing policy failures and successes.
+                            The economy faces structural, financial, and development hurdles that hinder long-term growth and stability.
                         </p>
                         
                         <h4 class="text-xl font-semibold mb-2">1. Structural Debt and Fiscal Instability</h4>
-                        <p class="text-pak-light-text mb-2">
-                            Pakistan faces a chronic balance of payments crisis, which forces it to rely heavily on international loans (IMF, World Bank, friendly nations) just to meet short-term liabilities.
-                        </p>
                         <ul class="custom-list mb-4">
-                            <li><strong>High Public Debt:</strong> The debt-to-GDP ratio is consistently high, meaning a large portion of the national budget is consumed by debt servicing (interest payments) rather than development projects.</li>
-                            <li><strong>Trade Deficit:</strong> Imports (especially energy and raw materials) consistently exceed exports, requiring constant injections of foreign currency to stabilize the Pakistani Rupee.</li>
+                            <li><strong>High Public Debt:</strong> A huge portion of the national budget is consumed by debt servicing (interest payments).</li>
+                            <li><strong>Trade Deficit:</strong> Imports (especially energy and raw materials) consistently exceed exports, creating chronic balance of payments crises and reliance on international loans (IMF).</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">2. Low Revenue and Tax Base</h4>
-                        <p class="text-pak-light-text mb-2">
-                            The government struggles to generate enough domestic revenue, making tax reform a central challenge.
-                        </p>
                         <ul class="custom-list mb-4">
-                            <li><strong>Low Tax-to-GDP Ratio:</strong> One of the lowest in the world, often due to widespread tax evasion, tax exemptions for large sectors (like agriculture), and poor enforcement.</li>
-                            <li><strong>Inflation and Poverty:</strong> High inflation (rising prices) erodes the purchasing power of the poor and middle class, worsening income inequality and leading to high rates of multi-dimensional poverty.</li>
+                            <li><strong>Low Tax-to-GDP Ratio:</strong> One of the lowest in the world, due to tax evasion and exemptions.</li>
+                            <li><strong>Inflation and Poverty:</strong> High inflation erodes the purchasing power of the poor and middle class, worsening income inequality.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">3. Energy Sector and Circular Debt</h4>
-                        <p class="text-pak-light-text mb-2">
-                            The energy sector is inefficient and plagued by the "circular debt" crisis.
-                        </p>
                         <ul class="custom-list">
-                            <li><strong>Circular Debt:</strong> A phenomenon where the government owes power producers money, the power producers owe fuel suppliers, and so on. This continuous blockage of cash prevents investment in new capacity, leading to load-shedding (power cuts) for consumers and industry.</li>
-                            <li><strong>Reliance on Imported Fuel:</strong> Despite large dam potential, a high reliance on imported furnace oil and LNG makes Pakistan vulnerable to global price fluctuations.</li>
+                            <li><strong>Circular Debt:</strong> A crisis where the government owes power producers money, which prevents investment and leads to widespread load-shedding (power cuts), crippling industry.</li>
+                            <li><strong>Reliance on Imported Fuel:</strong> Despite hydropower potential, reliance on imported oil and LNG makes Pakistan vulnerable to global price fluctuations.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Exam Questions Day 5 -->
+                    <div class="exam-question fade-in">
+                        <h4>Practice Exam Questions for Day 5</h4>
+                        <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                            <li><strong>Long Answer (15 Marks):</strong> Discuss the Major Economic Challenges facing Pakistan. How does the Circular Debt crisis in the energy sector negatively affect industrial growth?</li>
+                            <li><strong>Short Note (10 Marks):</strong> Describe the importance of the Textile Industry in the national economy. Also, differentiate between Rabi and Kharif crops.</li>
+                            <li><strong>Brief Answer (5 Marks):</strong> Explain how Pakistan's geography and history necessitate the construction of large dams for both agricultural and industrial sustainability.</li>
                         </ul>
                     </div>
                 </div>
@@ -678,24 +674,21 @@
                         
                         <h4 class="text-xl font-semibold mb-2">1. History of Foreign Policy and Defence Pacts</h4>
                         <p class="text-pak-light-text mb-4">
-                            Pakistan's foreign policy has been overwhelmingly driven by one factor: **the perceived security threat from India**.
+                            Pakistan's foreign policy has historically been dominated by the perceived security threat from India.
                         </p>
                         <ul class="custom-list">
-                            <li><strong>The First Phase (1950s): Pro-West Alliance.</strong> To counter the threat from a larger, stronger India, Pakistan joined the Western camp during the Cold War.</li>
-                            <li><strong>Defence Pacts:</strong> This led to Pakistan signing two major US-led military alliances: **SEATO** (Southeast Asia Treaty Organization) and **CENTO** (Central Treaty Organization, also known as the Baghdad Pact).</li>
-                            <li><strong>Goal:</strong> The goal was to receive military and economic aid from the United States to build its defence capabilities.</li>
+                            <li><strong>Pro-West Alliance (1950s):</strong> Pakistan joined the US-led military alliances SEATO and CENTO to receive military and economic aid to build its defense capabilities against India.</li>
                         </ul>
                         
                         <h4 class="text-xl font-semibold mb-2">2. Key Foreign Relations (A Modern Overview)</h4>
                         <p class="text-pak-light-text mb-4">
-                            Today, Pakistan's foreign policy is a balancing act.
+                            Today, Pakistan's foreign policy is a balancing act:
                         </p>
                         <ul class="custom-list">
-                            <li><strong>China:</strong> This is Pakistan's most important and reliable relationship, described as an "all-weather friendship." China is Pakistan's largest trading partner, a major military supplier, and its key partner in the **China-Pakistan Economic Corridor (CPEC)**.</li>
-                            <li><strong>United States:</strong> A complex and often difficult relationship. It is a "transactional" relationship based on security interests.</li>
-                            <li><strong>India:</strong> The central, adversarial relationship. Relations are defined by the core dispute over **Kashmir**, several wars, and ongoing military tensions.</li>
-                            <li><strong>Afghanistan:</strong> A historically volatile and crucial relationship. Relations are complicated by the border (the Durand Line) and cross-border security issues.</li>
-                            <li><strong>Saudi Arabia and UAE:</strong> These Gulf countries are key economic partners, providing financial support and hosting millions of Pakistani expatriate workers.</li>
+                            <li><strong>China:</strong> The most important and reliable relationship, an "all-weather friendship." Key partner in the China-Pakistan Economic Corridor (CPEC).</li>
+                            <li><strong>India:</strong> The central, adversarial relationship, defined by the core dispute over Kashmir and ongoing military tensions.</li>
+                            <li><strong>Afghanistan:</strong> A historically volatile and crucial relationship, complicated by the Durand Line border and cross-border security issues (TTP).</li>
+                            <li><strong>Saudi Arabia and UAE:</strong> Key economic partners, providing financial support and hosting millions of Pakistani expatriate workers (remittances).</li>
                         </ul>
                     </div>
                     
@@ -703,13 +696,9 @@
                     <div class="content-card fade-in">
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 17: Security Challenges: Terrorism, Extremism, and Regional Conflicts</h3>
                         
-                        <p class="text-lg text-pak-light-text mb-4">
-                            Pakistan faces a complex set of internal and external security threats.
-                        </p>
-                        
                         <h4 class="text-xl font-semibold mb-2">1. Internal Threat: Terrorism and Extremism</h4>
                         <p class="text-pak-light-text mb-4">
-                            The main security challenge comes from internal militant groups like the **Tehrik-i-Taliban Pakistan (TTP)**, which are anti-state and have carried out devastating attacks. Extremism refers to the intolerant, radical ideologies that provide the justification for terrorism (including sectarian violence). The state has responded with major military operations like **Zarb-e-Azb** to dismantle these networks.
+                            The main security challenge comes from internal militant groups like the Tehrik-i-Taliban Pakistan (TTP). Extremism refers to the intolerant, radical ideologies (including sectarian violence) that fuel terrorism. The state has responded with major military operations (Zarb-e-Azb).
                         </p>
                         
                         <h4 class="text-xl font-semibold mb-2">2. External Threats: Regional Conflicts</h4>
@@ -717,8 +706,8 @@
                             Pakistan is located in a volatile neighborhood.
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Eastern Border (with India):</strong> This is the primary external threat. The unresolved Kashmir issue and frequent border skirmishes keep the two nuclear-armed nations in a state of high tension.</li>
-                            <li><strong>Western Border (with Afghanistan):</strong> The border (Durand Line) is unstable and porous. Militant groups are alleged to use Afghan soil as a safe haven to launch attacks inside Pakistan, creating a major source of friction.</li>
+                            <li><strong>Eastern Border (with India):</strong> The primary external threat due to the unresolved Kashmir issue.</li>
+                            <li><strong>Western Border (with Afghanistan):</strong> The porous border and the use of Afghan soil as a safe haven by militant groups create major friction.</li>
                         </ul>
                     </div>
                     
@@ -727,25 +716,33 @@
                         <h3 class="text-3xl font-bold mb-4 text-pak-accent">Lecture 18: Environmental Problems and Sustainable Development (SDGs)</h3>
                         
                         <p class="text-lg text-pak-light-text mb-4">
-                            This is increasingly seen as Pakistan's most severe long-term, "existential" threat. Pakistan is one of the top 10 most vulnerable countries in the world to climate change.
+                            Environmental change is seen as Pakistan's most severe long-term, "existential" threat, as it is one of the top 10 most vulnerable countries in the world to climate change.
                         </p>
                         
                         <h4 class="text-xl font-semibold mb-2">1. Major Environmental Problems</h4>
                         <ul class="custom-list">
-                            <li><strong>Water Scarcity:</strong> Pakistan is on the verge of becoming an "absolute water-scarce" country due to population growth, climate change (which melts glaciers too fast), and poor water management (wasteful irrigation).</li>
-                            <li><strong>Air Pollution:</strong> Cities like Lahore and Karachi consistently rank among the most polluted in the world. The "smog" in winter is a major public health crisis.</li>
-                            <li><strong>Deforestation:</strong> Pakistan has one of the highest rates of deforestation in the world, leading to soil erosion and loss of biodiversity.</li>
-                            <li><strong>Climate Change Impacts:</strong> The country is experiencing more frequent and intense extreme weather events, such as the catastrophic floods in 2022 and severe heatwaves.</li>
+                            <li><strong>Water Scarcity:</strong> Pakistan is on the verge of becoming an "absolute water-scarce" country due to population growth and wasteful irrigation.</li>
+                            <li><strong>Air Pollution:</strong> Cities like Lahore and Karachi consistently rank among the most polluted in the world, creating a major winter smog crisis.</li>
+                            <li><strong>Climate Change Impacts:</strong> The country is experiencing more frequent and intense extreme weather events, such as the catastrophic floods in 2022.</li>
                         </ul>
                         
-                        <h4 class="text-xl font-semibold mb-2">2. Sustainable Development Goals (SDGs)</h4>
+                        <h4 class="text-xl font-semibold mb-2">2. Sustainable Development (SDGs)</h4>
                         <p class="text-pak-light-text mb-4">
-                            Sustainable development means finding ways to develop the economy without destroying the environment for future generations. Key initiatives include:
+                            Finding ways to develop the economy without destroying the environment for future generations. Key initiatives support the UN Sustainable Development Goals (SDGs):
                         </p>
                         <ul class="custom-list">
-                            <li><strong>Billion Tree Tsunami:</strong> A major reforestation project to combat deforestation and climate change.</li>
-                            <li><strong>Shift to Renewable Energy:</strong> Efforts to move toward sustainable sources like hydropower, solar, and wind (directly supporting SDG 7: Affordable and Clean Energy).</li>
-                            <li><strong>Water Conservation:</strong> A national push to promote "drip irrigation" and better water management (supporting SDG 6: Clean Water and Sanitation).</li>
+                            <li><strong>Billion Tree Tsunami:</strong> A major reforestation project to combat deforestation (supporting SDG 13: Climate Action).</li>
+                            <li><strong>Shift to Renewable Energy:</strong> Moving toward sustainable sources like hydropower, solar, and wind (supporting SDG 7: Affordable and Clean Energy).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Exam Questions Day 6 -->
+                    <div class="exam-question fade-in">
+                        <h4>Practice Exam Questions for Day 6</h4>
+                        <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                            <li><strong>Long Answer (15 Marks):</strong> Discuss the current state of Pakistan's Foreign Relations with both China and India. Why are these two relationships considered Pakistan's most crucial and complex?</li>
+                            <li><strong>Short Note (10 Marks):</strong> Analyze the twin security challenges of Terrorism and Extremism. Discuss the roles of the TTP and the issue of sectarian violence.</li>
+                            <li><strong>Brief Answer (5 Marks):</strong> Explain why environmental degradation, particularly Water Scarcity, is considered an "existential" threat to Pakistan. Mention two national initiatives for Sustainable Development.</li>
                         </ul>
                     </div>
                 </div>
@@ -765,7 +762,7 @@
 
     <script>
         (function() {
-            'use strict';
+            'useS-trict';
 
             document.addEventListener('DOMContentLoaded', function() {
 
